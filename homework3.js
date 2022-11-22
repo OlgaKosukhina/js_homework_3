@@ -36,12 +36,21 @@ getMaximumFromNumbers(numberOne, numberTwo, numberThree);
 
 // Task 4
 
-const getSum = (number1, number2) => console.log(number1 + number2);
-const getDifference = (number1, number2) => console.log(number1 - number2);
-const getMultiple = (number1, number2) => console.log(number1 * number2);
-const getDivision = (number1, number2) => console.log(number1 / number2);
+const getSum = (number1, number2) => number1 + number2;
+const getMultiple = (number1, number2) => number1 * number2;
+const getDivision = (number1, number2) => number1 / number2;
 
-getSum(10, 2);
-getDifference(10, 2);
-getMultiple(4, 2);
-getDivision(10, 5);
+function getDifference(number1, number2) {
+    if (number1 > number2) {
+        return number1 - number2;
+    } else if (number2 > number1) {
+        return number2 - number1;
+    } else if (number1 === number2) {
+        return 0;
+    }
+}
+
+console.log(getSum(10, 2));
+console.log(getMultiple(4, 2));
+console.log(getDivision(10, 5));
+console.log(getDifference(12, 12));
